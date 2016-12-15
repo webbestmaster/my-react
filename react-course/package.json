@@ -1,0 +1,14 @@
+{
+  "name": "react-cource",
+  "version": "1.0.0",
+  "description": "My react lessons",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "me",
+  "license": "MIT",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}
