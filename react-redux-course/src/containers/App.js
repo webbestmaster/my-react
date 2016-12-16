@@ -10,7 +10,7 @@ class App extends Component {
         const { getPhotos } = this.props.pageActions
         return <div>
             <User name={user.name}/>
-            <Page photos={page.photos} year={page.year}  getPhotos={getPhotos}/>
+            <Page photos={page.photos} year={page.year} fetching={page.fetching} getPhotos={getPhotos}/>
         </div>
     }
 }
