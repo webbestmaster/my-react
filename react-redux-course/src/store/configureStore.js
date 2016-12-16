@@ -2,6 +2,7 @@ import { createStore, applyMiddleware } from 'redux'
 import rootReducer from '../reducers'
 import { ping } from './enhancers/ping'
 import createLogger from 'redux-logger'
+import thunk from 'redux-thunk'
 
 export default function configureStore(initialState) {
     const logger = createLogger();
@@ -9,7 +10,7 @@ export default function configureStore(initialState) {
     const store = createStore(
             rootReducer,
             initialState,
-            applyMiddleware(logger, ping));
+            applyMiddleware(thunk, logger, ping));
 
     if (module.hot) {
         module.hot.accept('../reducers', () => {
