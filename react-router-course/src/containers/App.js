@@ -13,6 +13,7 @@ export default class App extends Component {
                     <li><Link to='/admin'>Админка</Link></li>
                     <li><NavLink to='/list'>Список жанров</NavLink></li>
                     <li><Link to='/list' activeClassName='active'>Список жанров</Link></li>
+                    <li><NavLink to='/login'>Войти</NavLink></li>
                 </ul>
                 {this.props.children}
             </div>

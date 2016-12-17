@@ -13,6 +13,15 @@ export default class Home extends Component {
         browserHistory.push(`/genre/${value}`)
     }
 
+    componentDidMount() {
+        this.context.router.setRouteLeaveHook(this.props.route, this.routerWillLeave)
+    }
+
+    routerWillLeave() {
+        let answer = window.confirm('Вы уверены?')
+        if (!answer) return false
+    }
+
     render() {
         return (
             <div className='row'>
